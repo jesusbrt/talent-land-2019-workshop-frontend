@@ -2,19 +2,19 @@ language: node_js
 node_js:
   - "7"
   
-before_script:
-  - npm install
-  
-script:
-  - echo "Antes de la construcción"
-  - npm run build
-  -ls
-
-deploy:
-  provider: pages
-  local_dir: build/
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+before_script: 
+  - "npm install"
+deploy: 
+  github_token: $GITHUB_TOKEN
   keep_history: true
-  on:
+  local_dir: build/
+  provider: pages
+  skip_cleanup: true
+  true: 
     branch: master
+language: node_js
+node_js: 
+  - "7"
+script: 
+  - "echo \"Antes de la construcción\""
+  - "npm run build"
